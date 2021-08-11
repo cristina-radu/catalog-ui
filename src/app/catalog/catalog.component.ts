@@ -1,4 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {AddEditTeacherComponent} from "./add-edit-teacher/add-edit-teacher.component";
 
 @Component({
   selector: 'app-catalog',
@@ -10,7 +12,7 @@ export class CatalogComponent implements OnInit {
   @Input() universityName: string = '';
   @Output() changeUniversityNameEvent = new EventEmitter();
 
-  constructor() { }
+  constructor(private dialog:MatDialog) { }
 
   ngOnInit(): void {
     this.catalogName = 'Mate-Info';
@@ -22,5 +24,12 @@ export class CatalogComponent implements OnInit {
 
   changeUniversityName(event: any) {
     this.changeUniversityNameEvent.emit(event.target.value);
+  }
+
+  addTeacher() {
+    const dialogRef = this.dialog.open(AddEditTeacherComponent, {
+      /*width: '100px',*/
+      /*data: {name: this.name, animal: this.animal}*/
+    });
   }
 }

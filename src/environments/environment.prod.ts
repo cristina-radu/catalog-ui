@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: 'http://localhost:8888/catalog',
+  teacherListUrl: '/teacher/',
+  deleteTeacherUrl: '/teacher/{id}'
 };

@@ -1,0 +1,9 @@
+.title{
+  display: flex;
+  justify-content: center;
+  color: darkslategrey;
+  font-size: large;
+  margin: 20px 0px 10px 0px;
+  font-family: -webkit-body;
+  font-weight: 700;
+}
