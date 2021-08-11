@@ -1,0 +1,18 @@
+<p>{{catalogName}}</p>
+<br>
+<!--<input type="text" [value]="catalogName" (input)="onInputEvent($event)">-->
+<input type="text" [(ngModel)]="catalogName">
+<br>
+<br>
+<br>
+<br>
+<div>Univeristy name: {{universityName}}</div>
+<div>
+  <span>New University name: </span>
+  <input type="text" (input)="changeUniversityName($event)">
+</div>
+<br>
+<br>
+<app-teacher-list></app-teacher-list>
+
+
