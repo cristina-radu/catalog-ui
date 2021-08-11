@@ -1,11 +1,10 @@
+
+<div class="add-teacher-container" fxLayout="row" fxLayoutAlign="start center">
+  <button mat-raised-button color="primary" class="add-teacher" (click)="addTeacher()">Add Teacher</button>
+</div>
 <mat-card>
-  <mat-card-header>
-    <button mat-raised-button color="primary" class="add-teacher" (click)="addTeacher()">Add Teacher</button>
-    <mat-card-title class="title">Teachers</mat-card-title>
-  </mat-card-header>
   <mat-card-content>
-    <app-teacher-list></app-teacher-list>
+    <div class="teacher-list-title">Teacher list</div>
+    <app-teacher-list class="teacher-list"></app-teacher-list>
   </mat-card-content>
-  <mat-card-footer>
-  </mat-card-footer>
 </mat-card>
