@@ -3,6 +3,8 @@ import {Teacher} from "../../model/teacher.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../environments/environment";
 import {UrlService} from "../../service/url.service";
+import {AddEditTeacherComponent} from "../add-edit-teacher/add-edit-teacher.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-teacher-list',
@@ -12,7 +14,7 @@ import {UrlService} from "../../service/url.service";
 export class TeacherListComponent implements OnInit {
   teachers: Teacher[] = [];
 
-  constructor(private httpClient: HttpClient, private urlService: UrlService) { }
+  constructor(private dialog:MatDialog, private httpClient: HttpClient, private urlService: UrlService) { }
 
   ngOnInit(): void {
     this.getTeachers();
@@ -31,5 +33,16 @@ export class TeacherListComponent implements OnInit {
 
   onTeacherListChanged() {
     this.getTeachers();
+  }
+
+  addTeacher() {
+    const dialogRef = this.dialog.open(AddEditTeacherComponent, {
+      data: {teacher: new Teacher(), isEditMode: false}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.getTeachers();
+    });
   }
 }

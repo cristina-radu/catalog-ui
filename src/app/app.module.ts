@@ -11,6 +11,9 @@ import {MaterialModule} from "./material.module";
 import {HttpClientModule} from "@angular/common/http";
 import {UrlService} from "./service/url.service";
 import {AddEditTeacherComponent} from "./catalog/add-edit-teacher/add-edit-teacher.component";
+import {CatalogTabComponent} from "./catalog/catalog-tab/catalog-tab.component";
+import {SubjectTableComponent} from "./catalog/subject-list/subject-table.component";
+import {AddEditSubjectComponent} from "./catalog/add-edit-subject/add-edit-subject.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import {AddEditTeacherComponent} from "./catalog/add-edit-teacher/add-edit-teach
     CatalogComponent,
     TeacherListComponent,
     TeacherComponent,
-    AddEditTeacherComponent
+    AddEditTeacherComponent,
+    CatalogTabComponent,
+    SubjectTableComponent,
+    AddEditSubjectComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,7 @@ import {AddEditTeacherComponent} from "./catalog/add-edit-teacher/add-edit-teach
     MaterialModule,
     HttpClientModule
   ],
-  providers: [UrlService],
+  providers: [UrlService, AddEditSubjectComponent, AddEditTeacherComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,3 @@
-
 import {NgModule} from "@angular/core";
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
@@ -9,7 +8,11 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatDividerModule} from "@angular/material/divider";
-import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatTableModule} from "@angular/material/table";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   imports: [
@@ -21,7 +24,12 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTabsModule,
+    MatTableModule,
+    MatSlideToggleModule
   ],
   exports: [
     MatListModule,
@@ -32,7 +40,12 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    MatDividerModule
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTabsModule,
+    MatTableModule,
+    MatSlideToggleModule
   ]
 })
 export class MaterialModule {

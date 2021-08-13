@@ -12,7 +12,7 @@ export class CatalogComponent implements OnInit {
   @Input() universityName: string = '';
   @Output() changeUniversityNameEvent = new EventEmitter();
 
-  constructor(private dialog:MatDialog) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.catalogName = 'Mate-Info';
@@ -26,10 +26,5 @@ export class CatalogComponent implements OnInit {
     this.changeUniversityNameEvent.emit(event.target.value);
   }
 
-  addTeacher() {
-    const dialogRef = this.dialog.open(AddEditTeacherComponent, {
-      /*width: '100px',*/
-      /*data: {name: this.name, animal: this.animal}*/
-    });
-  }
+
 }
